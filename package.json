@@ -1,0 +1,23 @@
+{
+	"name": "mcserverinfowechatappserver",
+	"version": "1.0.0",
+	"description": "用于查询MC服务器信息的微信小程序的后端",
+	"main": "index.js",
+	"scripts": {
+		"test": "git fetch --all && git reset --hard remotes/origin/master && tsc && node build/server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/haojie06/MCServerInfoWechatAppServer.git"
+	},
+	"keywords": [ "mc", "wechat" ],
+	"author": "haojie06",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/haojie06/MCServerInfoWechatAppServer/issues"
+	},
+	"homepage": "https://github.com/haojie06/MCServerInfoWechatAppServer#readme",
+	"dependencies": {
+		"@types/node": "^12.7.12"
+	}
+}
