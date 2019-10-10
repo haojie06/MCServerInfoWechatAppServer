@@ -16,14 +16,14 @@ createServer(options,(req:IncomingMessage, res) => {
     res.writeHead(200);
     res.end('hello world\n');
 }).listen(setting.listenPort);
-evetnEmmiter.emit("start");
+console.log(`服务器开始运行于端口：${setting.listenPort}`);
 
 
 evetnEmmiter.on("start",function() {
     console.log("https服务器运行于端口:" + setting.listenPort);
 });
 
-evetnEmmiter.on("connect",function(data){
+evetnEmmiter.on("connect",function(req:IncomingMessage){
     console.log("建立连接");
-    console.log(JSON.stringify(data));
+    console.log(req.url);
 });
