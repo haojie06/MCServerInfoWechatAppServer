@@ -9,11 +9,12 @@ const options = {
 };
 
 
-let server:Server =  createServer(options,(req, res) => {
+createServer(options,(req, res) => {
   res.writeHead(200);
   res.end('hello world\n');
-  evetnEmmiter.emit("start");
 }).listen(setting.listenPort);
+evetnEmmiter.emit("start");
+
 
 evetnEmmiter.on("start",()=>{
     console.log("https服务器运行于端口:" + setting.listenPort);
